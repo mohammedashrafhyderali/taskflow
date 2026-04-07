@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/api/tasks";
+const API_URL = "https://taskflow-production-fa54.up.railway.app/api/tasks";
 let currentFilter = "ALL";
 let allTasks = [];
 
