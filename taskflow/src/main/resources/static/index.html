@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>📝 TaskFlow</h1>
+    <p class="subtitle">Stay on top of your tasks</p>
+
+    <!-- Add Task Form -->
+    <div class="add-task">
+        <input type="text" id="taskInput" placeholder="Enter a new task..." />
+        <select id="statusSelect">
+            <option value="TODO">TODO</option>
+            <option value="IN_PROGRESS">IN PROGRESS</option>
+        </select>
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <!-- Filter Bar -->
+    <button class="filter-btn active" onclick="filterTasks('ALL', this)">All</button>
+    <button class="filter-btn" onclick="filterTasks('TODO', this)">TODO</button>
+    <button class="filter-btn" onclick="filterTasks('IN_PROGRESS', this)">In Progress</button>
+    <button class="filter-btn" onclick="filterTasks('DONE', this)">Done</button>
+
+    <!-- Task List -->
+    <div id="taskList"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
